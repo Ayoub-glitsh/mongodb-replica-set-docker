@@ -1,5 +1,31 @@
 
 
+
+
+## 🛠️ Technologies utilisées
+
+<p align="center">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="50" height="50" alt="Docker"/>
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg" width="70" height="50" alt="Docker Compose"/>
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="50" height="50" alt="MongoDB"/>
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="50" height="50" alt="WSL2/Linux"/>
+&nbsp;&nbsp;&nbsp;
+<img src="https://www.svgrepo.com/show/374167/vscode.svg" width="50" height="50" alt="mongosh"/>
+
+</p>
+
+<p align="center">
+Docker • Docker Compose • MongoDB • WSL2 • mongosh
+</p>
+
+
+
+
+
 🗄️ MongoDB Replica Set with Docker
 ===================================
 
