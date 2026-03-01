@@ -161,21 +161,21 @@ Depuis votre machine :
 
 1.  Identifier le PRIMARY :
     
-
+```bash
     rs.isMaster()
-    
+```   
 
 2.  Stopper le conteneur PRIMARY :
     
-
+```bash
     docker stop mongo1
-    
+```  
 
 3.  Vérifier l’élection automatique :
     
-
+```bash
     rs.status()
-    
+```  
 
 * * *
 
