@@ -64,19 +64,20 @@ Le cluster contient :
     
 *   3 volumes persistants
     
+```text
+          ┌─────────────┐
+          │   PRIMARY   │
+          │   mongo1    │
+          └──────┬──────┘
+                 │
+     ┌───────────┼───────────┐
+     │                       │
+┌─────────────┐        ┌─────────────┐
+│ SECONDARY   │        │ SECONDARY   │
+│  mongo2     │        │  mongo3     │
+└─────────────┘        └─────────────┘
 
-              ┌─────────────┐
-              │   PRIMARY   │
-              │   mongo1    │
-              └──────┬──────┘
-                     │
-         ┌───────────┼───────────┐                         │
-    ┌─────────────┐        ┌─────────────┐
-    │ SECONDARY   │        │ SECONDARY   │
-    │  mongo2     │        │  mongo3     │
-    └─────────────┘        └─────────────┘
-    
-
+```
 * * *
 
 🛠️ Technologies utilisées
