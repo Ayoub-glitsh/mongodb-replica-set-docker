@@ -1,0 +1,187 @@
+
+
+🗄️ MongoDB Replica Set with Docker
+===================================
+
+📌 Description
+--------------
+
+Ce projet met en place une **simulation d’un Replica Set MongoDB** en utilisant **Docker Compose**.  
+Il permet de comprendre et tester :
+
+*   🔁 La réplication des données
+    
+*   ⚡ L’élection automatique du PRIMARY
+    
+*   🛡️ La tolérance aux pannes (failover)
+    
+*   📦 Une architecture distribuée locale
+    
+
+* * *
+
+🏗️ Architecture
+----------------
+
+Le cluster contient :
+
+*   1 PRIMARY
+    
+*   2 SECONDARY
+    
+*   1 réseau Docker dédié
+    
+*   3 volumes persistants
+    
+
+              ┌─────────────┐
+              │   PRIMARY   │
+              │   mongo1    │
+              └──────┬──────┘
+                     │
+         ┌───────────┼───────────┐
+         │                       │
+    ┌─────────────┐        ┌─────────────┐
+    │ SECONDARY   │        │ SECONDARY   │
+    │  mongo2     │        │  mongo3     │
+    └─────────────┘        └─────────────┘
+    
+
+* * *
+
+🛠️ Technologies utilisées
+--------------------------
+
+Technologie
+
+Rôle
+
+Docker
+
+Conteneurisation
+
+Docker Compose
+
+Orchestration multi-services
+
+MongoDB 7
+
+Base de données
+
+WSL2 (Windows)
+
+Virtualisation backend
+
+* * *
+
+🚀 Installation et démarrage
+----------------------------
+
+### 1️⃣ Cloner le projet
+
+    git clone https://github.com/ton-username/mongodb-replica-set-docker.git
+    cd mongodb-replica-set-docker
+    
+
+### 2️⃣ Lancer les conteneurs
+
+    docker compose up -d
+    
+
+### 3️⃣ Initialiser le Replica Set
+
+    docker exec -it mongo1 mongosh
+    
+
+Puis :
+
+    rs.initiate({
+      _id: "rs0",
+      members: [
+        { _id: 0, host: "mongo1:27017" },
+        { _id: 1, host: "mongo2:27017" },
+        { _id: 2, host: "mongo3:27017" }
+      ]
+    })
+    
+
+* * *
+
+🔎 Vérification
+---------------
+
+    rs.status()
+    
+
+Vous devriez voir :
+
+*   1 PRIMARY
+    
+*   2 SECONDARY
+    
+
+* * *
+
+🔌 Connection String
+--------------------
+
+Depuis votre machine :
+
+    mongodb://localhost:27017,localhost:27018,localhost:27019/?replicaSet=rs0
+    
+
+* * *
+
+🧪 Test du failover
+-------------------
+
+1.  Identifier le PRIMARY :
+    
+
+    rs.isMaster()
+    
+
+2.  Stopper le conteneur PRIMARY :
+    
+
+    docker stop mongo1
+    
+
+3.  Vérifier l’élection automatique :
+    
+
+    rs.status()
+    
+
+* * *
+
+🧹 Nettoyage
+------------
+
+    docker compose down
+    docker system prune -f
+    
+
+* * *
+
+🎯 Objectifs pédagogiques
+-------------------------
+
+Ce projet permet de comprendre :
+
+*   Les bases des bases de données distribuées
+    
+*   La haute disponibilité
+    
+*   L’architecture Replica Set MongoDB
+    
+*   L’intégration avec Docker
+    
+
+* * *
+
+📜 Licence
+----------
+
+Projet open-source à des fins éducatives.
+
