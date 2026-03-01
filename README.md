@@ -1,3 +1,8 @@
+
+
+
+
+
 <p align="center">
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=4000&pause=1000&color=2ECC71&center=true&vCenter=true&width=700&lines=MongoDB+Replica+Set+with+Docker" />
@@ -23,7 +28,7 @@
 
 
 <p align="center">
-  <img src="assets/pic_02.png" width="600"/>
+  <img src="assets/pic_03.png" width="600"/>
 </p>
 
 
