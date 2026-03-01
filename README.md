@@ -16,6 +16,8 @@
 &nbsp;&nbsp;&nbsp;
 <img src="https://www.svgrepo.com/show/374167/vscode.svg" width="50" height="50" alt="mongosh"/>
 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="50" height="50" alt="mongosh"/>
+
 </p>
 
 <p align="center">
