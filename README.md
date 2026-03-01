@@ -76,25 +76,17 @@ Le cluster contient :
 🛠️ Technologies utilisées
 --------------------------
 
-Technologie
 
-Rôle
 
-Docker
 
-Conteneurisation
+| Technologie | Icône | Rôle |
+|-------------|--------|------|
+| Docker | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40"/> | Conteneurisation des services MongoDB |
+| Docker Compose | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40"/> | Orchestration multi-conteneurs |
+| MongoDB 7 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="40"/> | Base de données NoSQL distribuée |
+| mongosh | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" width="40"/> | Shell d’administration MongoDB |
+| WSL2 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="40"/> | Backend de virtualisation sous Windows |
 
-Docker Compose
-
-Orchestration multi-services
-
-MongoDB 7
-
-Base de données
-
-WSL2 (Windows)
-
-Virtualisation backend
 
 * * *
 
